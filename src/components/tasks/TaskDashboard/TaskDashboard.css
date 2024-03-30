@@ -1,0 +1,27 @@
+.input-container {
+    width: 200px; /* Set the desired width for all input containers */
+}
+
+.custom-select,
+.custom-input,
+.custom-select:focus,
+.custom-input:focus {
+    width: 100%; /* Make inputs fill their container */
+    padding: 0.5rem; /* Adjust padding as needed */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 0.25rem; /* Add border-radius for rounded corners */
+}
+
+.custom-select {
+    background-color: #fff; /* Specify background color */
+}
+
+.custom-input {
+    background-color: #f9f9f9; /* Specify background color */
+}
+
+.custom-select:focus,
+.custom-input:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #4a90e2; /* Change border color on focus */
+}
