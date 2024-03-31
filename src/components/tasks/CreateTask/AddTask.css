@@ -1,76 +1,96 @@
-.modal {
-    display: block;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-  
-  .modal-content {
-    background-color: #ecdede;
+/* AddTask.css */
 
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 30%;
+/* Default styles for modal */
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Style the modal content */
+.modal-content {
+  background-color: #ecdede;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%; /* Default width for large screens */
+}
+
+/* Style the close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.submit-button,
+.cancel-button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.submit-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.cancel-button {
+  background-color: #f44336;
+}
+
+.cancel-button:hover {
+  background-color: #da190b;
+}
+
+/* Media queries for responsive design */
+@media only screen and (max-width: 768px) {
+  /* Adjust modal margin for small to medium screens */
+  .modal-content {
+    margin: 30% auto;
+    width: 60%;
   }
-  
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+}
+
+@media only screen and (max-width: 480px) {
+  /* Adjust modal margin and width for extra small screens */
+  .modal-content {
+    margin: 50% auto;
+    width: 80%;
   }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  h2 {
-    margin-top: 0;
-  }
-  
-  input[type="text"],
-  select {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    box-sizing: border-box;
-  }
-  
-  .button-container {
-    text-align: center;
-  }
-  
-  .submit-button,
-  .cancel-button {
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-  }
-  
-  .submit-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-  }
-  
-  .submit-button:hover {
-    background-color: #45a049;
-  }
-  
-  .cancel-button {
-    background-color: #f44336;
-  }
-  
-  .cancel-button:hover {
-    background-color: #da190b;
-  }
-  
+}

@@ -2,7 +2,7 @@ import  { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addTaskAsync } from '../../../features/tasks/tasksSlice';
 import './AddTask.css'; // Import CSS for modal styling
-
+import { Toaster, toast } from 'react-hot-toast';
 const AddTask = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [title, setTitle] = useState('');
@@ -21,13 +21,15 @@ const AddTask = () => {
         priority,
         status: "Pending"
       }));
+    
       setIsOpen(false);
       setTitle('');
       setDescription('');
       setAssignee('');
       setPriority('');
     } catch (error) {
-      console.error('Error adding task:', error.message);
+      // console.error('Error adding task:', error.message);
+      toast.error("Please valid input type")
     }
   };
 
@@ -76,6 +78,7 @@ const AddTask = () => {
           </div>
         </div>
       )}
+       <Toaster />
     </div>
   );
 };

@@ -41,7 +41,7 @@ const DynamicTaskCard = ({ tasks, status }) => {
     };
 
     return (
-        <div className="rounded-lg border border-gray-300 h-screen" style={{ width: '300px', overflowY: 'auto' }}>
+        <div className="rounded-lg  border border-gray-300 h-screen" style={{ width: '300px', overflowY: 'auto' }}>
             {/* Fixed bar */}
             <div className={`sticky top-0 ${isSticky ? 'shadow-md' : ''}`} style={{ backgroundColor: getStatusColor(status) }}>
                 <h3 className="text-lg text-center py-1 rounded-t-lg font-semibold mb-2" style={{ color: '#ffffff', textTransform: 'uppercase', padding: '0.5rem' }}>
